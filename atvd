@@ -1,0 +1,45 @@
+def menu():
+    print("---- Terminal da loja ----")
+    print("1- ver catálogo")
+    print("2- comprar")
+    print("3- sair")
+
+def catalogo():
+    print("---- Catálogo ----")
+    print("1- calça")
+    print("2- camiseta")
+    print("3- casaco")
+    print("Tamanhos PP, P, M, G e GG")
+    
+def comprar():
+    print("---- Comprar item----")
+    item = int(input("Número do item que você deseja comprar: "))
+    Tamanho = str(input("Tamanho da peça: "))
+    if item == 1:
+        peca = " Calça"
+    elif item == 2:
+        peca = "Camiseta"
+    elif item == 3:
+        peca = "Casaco"
+    else:
+        peca = "Peça não reconhecida"
+        item = int(input("Número do item que você deseja comprar: "))
+        
+    print("---- Pedido realizado ----")
+    print(f"O pedido realizado foi: um(a){peca} do tamanho", Tamanho.upper)
+    
+def main():
+    while True:
+        menu()
+        op = int(input("Escolha uma opção: "))
+        if op == 3:
+            print("Saindo do catálogo...")
+            break
+        elif op == 1:
+            catalogo()
+        elif op == 2:
+            comprar()
+        else:
+            print("Opção invalída! Tente novamente...")
+main()
+
